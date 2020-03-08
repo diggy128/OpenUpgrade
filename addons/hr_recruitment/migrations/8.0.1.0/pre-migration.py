@@ -2,7 +2,11 @@
 ##############################################################################
 #
 #    OpenERP, Open Source Management Solution
+<<<<<<< Updated upstream
 #    This migration script copyright (C) 2010-2014 Akretion
+=======
+#    This module copyright (C) 2017 Dimitrios Tanis (jtanis@tanisfood.gr)
+>>>>>>> Stashed changes
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -18,12 +22,21 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
+<<<<<<< Updated upstream
 
 
+=======
+>>>>>>> Stashed changes
 from openerp.openupgrade import openupgrade
 
 
 @openupgrade.migrate()
 def migrate(cr, version):
+<<<<<<< Updated upstream
     execute = openupgrade.logged_query
     execute(cr, "UPDATE hr_applicant SET response = NULL WHERE response = 0")
+=======
+    cr.execute(
+        "UPDATE hr_applicant SET response = NULL WHERE response = 0;"
+    )
+>>>>>>> Stashed changes
